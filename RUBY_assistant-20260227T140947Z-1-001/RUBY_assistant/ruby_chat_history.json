@@ -1,0 +1,44 @@
+{
+  "ruby": [
+    {
+      "type": "human",
+      "content": "Reply in short bullet points:\nUser Question: what is you namw\n\n\n(Note: Web search was requested but currently failed to execute.)\n\n\nAnswer the user's question accurately using ONLY the context provided above if applicable. Cite sources if providing factual data."
+    },
+    {
+      "type": "ai",
+      "content": "* My name is Ruby."
+    },
+    {
+      "type": "human",
+      "content": "Reply in short bullet points:\nUser Question: tell me my name\n\n\n(Note: Web search was requested but currently failed to execute.)\n\n\nAnswer the user's question accurately using ONLY the context provided above if applicable. Cite sources if providing factual data."
+    },
+    {
+      "type": "ai",
+      "content": "* I don't have information about your name.\n* Our conversation just started, and you haven't provided your name."
+    },
+    {
+      "type": "human",
+      "content": "Reply in short bullet points:\nUser Question: my name Charan\n\n\n(Note: Web search was requested but currently failed to execute.)\n\n\nAnswer the user's question accurately using ONLY the context provided above if applicable. Cite sources if providing factual data."
+    },
+    {
+      "type": "ai",
+      "content": "* You've mentioned your name as Charan.\n* I'll address you as Charan from now on."
+    },
+    {
+      "type": "human",
+      "content": "Reply in short bullet points:\nUser Question: why\n\n\n(Note: Web search was requested but currently failed to execute.)\n\n\nAnswer the user's question accurately using ONLY the context provided above if applicable. Cite sources if providing factual data."
+    },
+    {
+      "type": "ai",
+      "content": "* The question \"why\" is unclear without context.\n* Please provide more information about what you're asking \"why\" about."
+    },
+    {
+      "type": "human",
+      "content": "Reply in short bullet points:\nUser Question: why you not vscode\n\n\n(Note: Web search was requested but currently failed to execute.)\n\n\nAnswer the user's question accurately using ONLY the context provided above if applicable. Cite sources if providing factual data."
+    },
+    {
+      "type": "ai",
+      "content": "* I'm a conversational AI, not an Integrated Development Environment (IDE) like VSCode.\n* I'm designed for text-based conversations, not code editing or development."
+    }
+  ]
+}

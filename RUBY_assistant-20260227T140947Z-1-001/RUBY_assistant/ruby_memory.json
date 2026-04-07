@@ -1,0 +1,27 @@
+{
+  "name": "Charan",
+  "facts": [],
+  "events": [
+    {
+      "description": "when was exam",
+      "type": "exam",
+      "date": null,
+      "created_at": "2026-04-03T05:44:30.268140"
+    },
+    {
+      "description": "when exam",
+      "type": "exam",
+      "date": null,
+      "created_at": "2026-04-03T05:44:53.528899"
+    },
+    {
+      "description": "tell me when was exam",
+      "type": "exam",
+      "date": null,
+      "created_at": "2026-04-03T05:46:20.783375"
+    }
+  ],
+  "likes": [
+    "Coding,Playing Cricket,Listening Music"
+  ]
+}

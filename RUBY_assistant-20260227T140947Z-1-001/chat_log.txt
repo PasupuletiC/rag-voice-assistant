@@ -1,0 +1,81 @@
+[2026-02-27 20:03:12] User: tell me about pdf
+[2026-02-27 20:03:12] Ruby: • PDF stands for Portable Document Format
+• Developed by Adobe
+• Used for sharing documents with formatting and layout intact
+• Can contain text, images, and graphics
+• Widely used for documents, ebooks, and forms
+
+[2026-02-27 20:04:34] User: what i add pdf tell that
+[2026-02-27 20:04:34] Ruby: • Add PDF to read documents
+• Install PyPDF2 for PDF support
+• Required for accessing PDF files like Resume_PCK.pdf
+
+[2026-02-27 20:05:11] User: tell
+[2026-02-27 20:05:11] Ruby: • Tell me your query
+• I'll provide information
+• Ask me anything
+
+[2026-02-27 20:05:29] User: in document
+[2026-02-27 20:05:29] Ruby: • Contains text and images
+• Formatted for reading
+• Includes Resume_PCK.pdf file
+
+[2026-02-27 20:06:02] User: in that tell me name
+[2026-02-27 20:06:02] Ruby: • Name mentioned: Resume_PCK
+• File type: PDF
+• Document name: Resume_PCK.pdf
+
+[2026-02-27 20:06:58] User: in that tell education
+[2026-02-27 20:06:58] Ruby: • Education details 
+• Part of Resume_PCK.pdf 
+• Includes qualifications
+
+[2026-02-27 20:07:11] User: Generate a quiz for [Your Topic]. ask one by one if correct appreciate else correct the answer and at last give score.
+[2026-02-27 20:07:11] Ruby: • Topic: PDF (Portable Document Format)
+• Here's your first question:
+What does PDF stand for?
+• Please respond with your answer
+
+[2026-02-27 20:07:30] User: Generate a quiz for [Your Topic]. ask one by one if correct appreciate else correct the answer and at last give score.
+[2026-02-27 20:07:30] Ruby: • Topic: PDF
+• Question 1: What does PDF stand for?
+• Please answer
+• I'll respond with:
+• Correct answer and appreciation
+• Correction and explanation if incorrect
+
+[2026-02-27 20:07:59] User: Create a comprehensive study plan for [Your Topic]. Break it down into weekly goals, include resources, and suggest practice exercises.
+[2026-02-27 20:07:59] Ruby: • Topic: PDF (Portable Document Format)
+• Weekly Goals:
+• Week 1: Introduction to PDF
+• Week 2: Creating and editing PDFs
+• Week 3: Security and accessibility
+• Resources:
+• Adobe Acrobat tutorials
+• Online PDF guides
+• PDF-related blogs
+• Practice Exercises:
+• Create a PDF from scratch
+• Edit and annotate a PDF
+• Add security features to a PDF
+
+[2026-02-27 20:10:48] User: open google
+[2026-02-27 20:10:48] Ruby: Opening google
+
+[2026-02-27 20:11:07] User: open desktop
+[2026-02-27 20:11:07] Ruby: I couldn't open desktop folder: [WinError 2] The system cannot find the file specified: 'C:\\Users\\Dell\\Desktop'
+
+[2026-02-27 20:13:54] User: open desktop
+[2026-02-27 20:13:54] Ruby: I couldn't open desktop folder: [WinError 2] The system cannot find the file specified: 'C:\\Users\\Dell\\Desktop'
+
+[2026-02-27 20:15:30] User: open desktop
+[2026-02-27 20:15:30] Ruby: Opening your desktop folder.
+
+[2026-02-27 20:15:51] User: open download
+[2026-02-27 20:15:51] Ruby: Opening download
+
+[2026-02-27 20:16:11] User: opoen downloads
+[2026-02-27 20:16:11] Ruby: • Open the 'Files' or 'Downloads' folder 
+• Check your device's download manager 
+• Press 'Ctrl+J' on your browser to view downloads
+

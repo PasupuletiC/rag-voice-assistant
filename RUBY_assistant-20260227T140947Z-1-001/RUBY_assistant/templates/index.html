@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Ruby – AI Voice Assistant</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Google Fonts for Advanced UI -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css" />
+  <!-- Markdown Parser -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+
+<!-- Ambient Background Orbs -->
+<div class="ambient-orbs">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+</div>
+
+
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+</div>
+
+
+<!-- ✅ MAIN FLEX LAYOUT -->
+<div class="app-container">
+
+  <!-- ✅ LEFT PROMPT TEMPLATES SIDEBAR -->
+  <div id="leftSidebar" class="left-sidebar">
+
+    <!-- <div id="sidebarToggle" style="cursor:pointer; padding:10px; font-size:22px;">
+      ☰
+    </div> -->
+
+    <div class="sidebar-header">
+      <h3>Prompt Templates</h3>
+    </div>
+
+    <input id="templateSearch" class="template-search" type="text" placeholder="Search templates..." />
+    
+    <div class="template-section" >
+      <h4>📚 Learning & Education</h4>
+      <div class="template-card" data-prompt="Create a comprehensive study plan for [Your Topic]. Break it down into weekly goals, include resources, and suggest practice exercises." data-category="education">
+        <b>Custom Study Plan</b>
+        <p>Get a personalized learning roadmap.</p>
+      </div>
+      <div class="template-card" data-prompt="Explain [Complex Topic] using the Feynman Technique - explain it as if teaching it to a complete beginner." data-category="education">
+        <b>Simple Explanations</b>
+        <p>Break down complex topics simply.</p>
+      </div>
+      <div class="template-card" data-prompt="Generate practice questions and exercises for [Subject/Topic], ranging from basic to advanced difficulty." data-category="education">
+        <b>Practice Exercise Generator</b>
+        <p>Get customized learning exercises.</p>
+      </div>
+      <div class="template-card" data-prompt="Generate a quiz for [Your Topic]. ask one by one if correct appreciate else correct the answer and at last give score." data-category="education">
+        <b>Play Quiz</b>
+        <p>Generate a quiz for a specific topic or subject.</p>
+      </div>
+    </div>
+    
+    <div class="template-section" >
+      <h4>💻 Programming & Technology</h4>
+      <div class="template-card" data-prompt="Explain the concept of quantum computing in simple terms that a beginner can understand. Include real-world applications and future implications." data-category="technology">
+          <b>Quantum Computing Explained</b>
+          <p>Get a beginner-friendly guide to quantum computing.</p>
+      </div>
+      <div class="template-card" data-prompt="Help me debug this code issue: [Paste your code here]. Explain what might be wrong and suggest solutions." data-category="technology">
+          <b>Code Debugging Helper</b>
+          <p>Get assistance with code problems and solutions.</p>
+      </div>
+      <div class="template-card" data-prompt="Create a step-by-step tutorial for building a REST API using Python and Flask. Include code examples and best practices." data-category="technology">
+          <b>API Tutorial Generator</b>
+          <p>Get detailed coding tutorials with examples.</p>
+      </div>
+    </div>
+    <div class="template-section" >
+        <h4>✍️ Writing & Creativity</h4>
+            <div class="template-card" data-prompt="Write a creative story about [Your Scenario]. Include vivid descriptions, engaging dialogue, and a surprising twist at the end." data-category="writing">
+                <b>Story Generator</b>
+                <p>Create engaging short stories.</p>
+            </div>
+            <div class="template-card" data-prompt="Help me brainstorm content ideas for [Your Topic/Niche]. Consider different formats, angles, and audience interests." data-category="writing">
+                <b>Content Brainstorming</b>
+                <p>Generate creative content ideas.</p>
+            </div>
+            <div class="template-card" data-prompt="Proofread and improve this text: [Your Text]. Enhance clarity, flow, and engagement while maintaining the original message." data-category="writing">
+                <b>Writing Improver</b>
+                <p>Polish and enhance your writing.</p>
+            </div>
+    </div>
+      
+    <div class="template-section" >
+        <h4>💼 Professional Development</h4>
+            <div class="template-card" data-prompt="Review and improve my resume for a [Job Title] position. Suggest improvements for impact and clarity." data-category="professional">
+                <b>Resume Enhancer</b>
+                <p>Get professional resume feedback.</p>
+            </div>
+            <div class="template-card" data-prompt="Help me prepare for a job interview for [Position]. Suggest common questions and strong answers based on my experience." data-category="professional">
+                <b>Interview Prep</b>
+                <p>Practice interview questions and answers.</p>
+            </div>
+            <div class="template-card" data-prompt="Draft a professional email to [Recipient] regarding [Topic]. Maintain a professional tone while clearly conveying the message." data-category="professional">
+                <b>Email Composer</b>
+                <p>Create effective professional emails.</p>
+            </div>
+    </div>
+      
+    <div class="template-section" >
+        <h4>🎯 Productivity & Planning</h4>
+            <div class="template-card" data-prompt="Create a detailed project plan for [Your Project]. Include milestones, timelines, and potential challenges to consider." data-category="productivity">
+                <b>Project Planner</b>
+                <p>Get organized project frameworks.</p>
+            </div>
+            <div class="template-card" data-prompt="Help me create a weekly schedule that optimizes my productivity and includes time for work, exercise, and personal development." data-category="productivity">
+                <b>Schedule Optimizer</b>
+                <p>Balance your time effectively.</p>
+            </div>
+            <div class="template-card" data-prompt="Suggest time management techniques and tools to improve my productivity while working on [Type of Task/Project]." data-category="productivity">
+                <b>Productivity Tips</b>
+                <p>Get personalized efficiency advice.</p>
+            </div>
+    </div>
+      
+    <div class="template-section" >
+        <h4>📈 Marketing</h4>
+            <div class="template-card" data-prompt="Generate compelling ad copy for a [product/service] targeting [target audience]." data-category="marketing">
+                <b>Ad Copy Generator</b>
+                <p>Create compelling ad copy.</p>
+            </div>
+            <div class="template-card" data-prompt="Create a social media post for [platform] to promote [event/product]." data-category="marketing">
+                <b>Social Media Post</b>
+                <p>Draft a promotional social media post.</p>
+            </div>
+            <div class="template-card" data-prompt="Write an email campaign to nurture leads for a [product/service]." data-category="marketing">
+                <b>Email Campaign</b>
+                <p>Craft a lead-nurturing email campaign.</p>
+            </div>
+    </div>
+      
+    <div class="template-section" >
+        <h4>📱 Social Media</h4>
+            <div class="template-card" data-prompt="Give me 5 tweet ideas about [topic]." data-category="social">
+                <b>Tweet Ideas</b>
+                <p>Brainstorm engaging tweet ideas.</p>
+            </div>
+            <div class="template-card" data-prompt="Write an engaging Instagram caption for a photo of [subject]." data-category="social">
+                <b>Instagram Caption</b>
+                <p>Write a captivating Instagram caption.</p>
+            </div>
+            <div class="template-card" data-prompt="Outline a LinkedIn article about [professional topic]." data-category="social">
+                <b>LinkedIn Article Outline</b>
+                <p>Structure a professional LinkedIn article.</p>
+            </div>
+    </div>
+      
+    <div class="template-section">
+        <h4>🛠️ Developer Tools</h4>
+            <div class="template-card" data-prompt="Generate a regular expression to validate a [type of string, e.g., email, phone number]." data-category="dev-tools">
+                <b>Regex Generator</b>
+                <p>Create a regular expression for validation.</p>
+            </div>
+            <div class="template-card" data-prompt="Explain how to use the git command `[command]` with an example." data-category="dev-tools">
+                <b>Git Command Helper</b>
+                <p>Understand a git command with an example.</p>
+            </div>
+            <div class="template-card" data-prompt="Generate a `docker-compose.yml` file for a web application with a [frontend framework] frontend and a [backend framework] backend." data-category="dev-tools">
+                <b>Docker-compose Generator</b>
+                <p>Generate a docker-compose file for your web app.</p>
+            </div>
+    </div>
+      
+    <div class="template-section" >
+        <h4>🧘 Personal</h4>
+            <div class="template-card" data-prompt="Create a 3-day workout plan for a beginner focusing on full-body exercises." data-category="personal">
+                <b>Workout Planner</b>
+                <p>Get a beginner-friendly workout plan.</p>
+            </div>
+            <div class="template-card" data-prompt="Give me a recipe for a healthy dinner with [ingredients]." data-category="personal">
+                <b>Recipe Generator</b>
+                <p>Find a healthy dinner recipe.</p>
+            </div>
+            <div class="template-card" data-prompt="Plan a 3-day travel itinerary for a trip to [city]." data-category="personal">
+                <b>Travel Itinerary</b>
+                <p>Plan a 3-day trip to any city.</p>
+            </div>
+    </div>
+   
+  </div>
+
+
+  <!-- ✅ MAIN CHAT AREA -->
+  <div id="mainChatArea" class="root">
+    <div class="ruby-card">
+
+      <!-- HEADER -->
+      <div class="ruby-header">
+        <div class="ruby-title">
+          <span class="ruby-logo">💎</span>
+          <span>Ruby AI</span>
+        </div>
+      </div>
+
+      <!-- CHAT -->
+      <div class="ruby-chat-wrap">
+        <div class="ruby-chat" id="chatBox"></div>
+        <div class="ruby-scanline"></div>
+      </div>
+
+      <!-- INPUT -->
+      <div class="ruby-footer">
+        <input id="chatInput" class="ruby-input" type="text" placeholder='Type whats on your mind...' />
+        <button id="sendBtn" class="ruby-btn primary">➤</button>
+        <button id="pauseBtn" class="ruby-btn danger" style="display:none;"> ⏸ </button>
+        <button id="micBtn" class="ruby-btn mic" title="Voice Input">🎤</button>
+      </div>
+
+      <!-- TOOLBAR -->
+      <div class="ruby-toolbar">
+
+        <div class="rag-bar">
+          <div style="display: flex; gap: 15px;">
+            <label class="rag-checkbox">
+              <input type="checkbox" id="useRag"> 📚 Ask my documents
+            </label>
+            <label class="rag-checkbox">
+              <input type="checkbox" id="useWeb" checked> 🌐 Search Web
+            </label>
+          </div>
+          <div class="rag-file-upload">
+            <input type="file" id="docFile" accept=".txt,.pdf,.jpg,.jpeg,.png,.gif,.bmp" multiple>
+            <button id="uploadDocBtn" class="ruby-btn" style="font-size: 11px; padding: 4px 8px;">Upload</button>
+            <span id="uploadStatus" class="upload-status"></span>
+          </div>
+          <div id="docList" class="doc-list"></div>
+        </div>
+
+        <div class="ruby-toolbar-left">
+          <label class="rag-checkbox" style="margin-right: 15px; border: 1px solid rgba(0,255,136,0.3); padding: 5px 12px; border-radius: 20px; background: rgba(0,255,136,0.05);">
+            <input type="checkbox" id="wakeWordToggle" checked>
+            <span style="display:flex; align-items:center; gap:8px;">
+               <span id="wakeDot" style="width:8px; height:8px; background:var(--danger); border-radius:50%; display:inline-block; box-shadow:0 0 5px var(--danger); transition: all 0.3s;"></span> 
+               Wake Word (Hey Ruby)
+            </span>
+          </label>
+          <button id="clearBtn" class="ruby-btn ghost">🧹 Clear</button>
+          <button id="jarvisBtn" class="ruby-btn ghost">🤖 Jarvis Mode</button>
+          <button id="researchBtn" class="ruby-btn ghost" style="color: #00f5ff; border-color: rgba(0, 245, 255, 0.4);">🔍 Deep Research</button>
+          <button id="exportBtn" class="ruby-btn ghost">📤 Export</button>
+        </div>
+
+        <div class="ruby-toolbar-right">
+          <span id="status" class="ruby-status">Status: Idle</span>
+        </div>
+      </div>
+
+      <!-- AVATAR
+      <div class="ruby-avatar-wrap">
+        <div class="ruby-orb">
+          <div class="ruby-orb-core"></div>
+          <div class="ruby-orb-ring"></div>
+        </div> -->
+
+        <!-- <div class="ruby-orb-text">
+          <div class="ruby-orb-title">Ruby Online</div>
+          <div class="ruby-orb-desc">
+            Say <b>"Hey Ruby"</b> when the mic is active.
+          </div>
+        </div>
+      </div>
+
+      <div class="ruby-footer-bar">
+        Ruby AI Assistant • Advanced Voice + Memory System • Powered by You
+      </div> -->
+
+    </div>
+  </div>
+
+</div>
+
+<!-- ✅ FLOATING REOPEN BUTTON -->
+<!-- <div id="floatingReopen" class="floating-reopen hidden">☰</div> -->
+
+<!-- ✅ JARVIS OVERLAY -->
+<div id="jarvisOverlay" class="jarvis-overlay hidden">
+  <div class="radar-bg-grid"></div>
+  
+  <!-- Use safe flex stacking to explicitly prevent ANY overlap while ensuring perfect vertical alignment! -->
+  <div class="radar-hud-wrapper hologram-scene" style="position: absolute; width:100%; height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; gap: 50px; top:0; left:0;">
+    
+    <!-- 3D Geometric Hologram Core -->
+    <div class="main-radar" style="flex-shrink: 0;">
+      <div class="hologram-scaler" style="transition: transform 0.1s ease-out; position: relative; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
+        <div class="hologram-core core-spin">
+          <!-- Central Glowing Core -->
+          <div class="core-inner"></div>
+          <div class="core-aura"></div>
+          <!-- Orbital Rings -->
+          <div class="holo-ring ring-1"></div>
+          <div class="holo-ring ring-2"></div>
+          <div class="holo-ring ring-3"></div>
+          <!-- Orbiting Particles -->
+          <div class="holo-particles"></div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- The majestic text box UI from the screenshot exactly! Using position relative so it gracefully stacks -->
+    <div class="jarvis-text-box" style="position: relative; max-width: 600px; width: 90%; flex-shrink: 0; font-family: sans-serif; text-align: center; z-index: 100; background: rgba(0,20,10,0.8); padding: 25px 50px; border-radius: 20px; border: 1px solid rgba(0,255,102,0.5); box-shadow: 0 10px 40px rgba(255, 180, 0, 0.2); backdrop-filter: blur(10px);">
+      <div class="px-text" id="pxText" style="font-size: 20px; color: #ffb400; font-weight: bold; margin-bottom: 20px; letter-spacing: 1px; text-shadow: 0 0 10px rgba(255,180,0,0.5);">AWAITING COMMAND...</div>
+      <div class="jarvis-controls" style="display: flex; gap: 20px; justify-content: center;">
+        <button id="jarvisClose" title="Close" style="width: 50px; height: 50px; border-radius: 50%; border: 1px solid rgba(255,180,0,0.4); background: rgba(0,0,0,0.5); color: white; display: flex; align-items: center; justify-content: center; font-size: 20px; cursor: pointer; transition: 0.2s;" onmouseover="this.style.background='rgba(255,180,0,0.2)'" onmouseout="this.style.background='rgba(0,0,0,0.5)'">✕</button>
+        <button id="jarvisMic" title="Mic" style="width: 50px; height: 50px; border-radius: 50%; border: 1px solid rgba(255,180,0,0.4); background: rgba(0,0,0,0.5); color: #888; display: flex; align-items: center; justify-content: center; font-size: 20px; cursor: pointer; transition: 0.2s;" onmouseover="this.style.background='rgba(255,180,0,0.2)'" onmouseout="this.style.background='rgba(0,0,0,0.5)'">🎤</button>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- ✅ DEEP RESEARCH OVERLAY -->
+<div id="researchOverlay" class="research-overlay hidden">
+  <div class="research-container">
+    <div class="research-header">
+      <span class="research-icon">🔍</span>
+      <h2>Omni-Search Protocol</h2>
+      <button id="researchClose" class="research-close-btn">✖</button>
+    </div>
+    
+    <div class="research-scanner">
+      <div class="scanner-line"></div>
+    </div>
+    
+    <div class="research-body">
+      <p class="research-subtitle">Enter your query for deep multi-agent web & document analysis.</p>
+      <textarea id="researchInput" class="research-input" placeholder="E.g., Synthesize a comprehensive overview of quantum computing architectures..."></textarea>
+      
+      <div class="research-actions">
+        <button id="researchSubmitBtn" class="ruby-btn primary research-submit">
+          Initialize Deep Research
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/static/script.js"></script>
+
+  <!-- VISION HUD MODULE -->
+  <div id="visionContainer" style="display:none; position:fixed; bottom: 20px; left: 20px; z-index: 10001; border: 2px solid rgba(255, 210, 0, 0.8); border-radius: 10px; overflow: hidden; height: 120px; width: 160px; box-shadow: 0 0 15px rgba(255, 210, 0, 0.6);">
+      <video id="liveVideo" autoplay playsinline style="width: 100%; height: 100%; object-fit: cover;"></video>
+      <canvas id="liveCanvas" style="display:none;"></canvas>
+  </div>
+</body>
+
+</html>
